@@ -8,3 +8,30 @@
     left: 50%;
     border-radius: 50px;
 }
+
+#top-bar{
+    width:700px;
+    height:170px;
+    background-color: white;
+    border-bottom:1.5px gray solid;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-left: 50px;
+}
+#middle-bar{
+    display:grid;
+    grid-template-columns: 1fr 1px 1fr;
+    width:700px;
+    height:370px;
+    margin-top:30px;
+    margin-left:50px
+}
+#mySelect{
+    text-align: center;
+}
+#comSelect{
+    text-align: center;
+}
+#divided-line{
+    background-color: gray;
+}
