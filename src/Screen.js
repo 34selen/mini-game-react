@@ -1,6 +1,9 @@
 import "./Screen.css"
 import Select from "./Select";
+import {useState,useEffect} from 'react';
 function Screen(){
+    const [mySelect,setMySelect]=useState("");
+    const [comSelect,setComselect]=useState("");
 
     return(
         <div id="screen">
@@ -15,7 +18,7 @@ function Screen(){
                 </div>
             </div>
             <div id="botton-bar">
-                <Select />
+                <Select setMy={setMySelect} setCom={setComselect}/>
             </div>
         </div>
     )
