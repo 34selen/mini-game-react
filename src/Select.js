@@ -1,14 +1,15 @@
+import "./Select.css"
 function Select(){
     return(
-        <div>
-            <div id="rock">
-                <img src="./img/rock.jpeg" alt="Rock" />
+        <div id="select-form">
+            <div class="button-form">
+                <img id="rock"src="/img/rock.jpeg" alt="Rock" />
             </div>
-            <div id="sissor">
-                <img src="./img/sissor.jpeg"alt="Sissor"/>
+            <div class="button-form" >
+                <img id="sissor" src="/img/sissor.jpeg"alt="Sissor"/>
             </div>
-            <div id="paper">
-                <img src="./img/paper.jpeg" alt="paper" />
+            <div class="button-form">
+                <img  id="paper" src="/img/paper.jpeg" alt="paper" />
             </div>
         </div>
     )

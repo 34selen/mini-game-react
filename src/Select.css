@@ -1,0 +1,23 @@
+img{
+    width:200px;
+    height:200px;
+    display:inline;
+}
+#select-form{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button-form{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+#rock{
+    width:150px;
+    height:150px;
+}
+#sissor{
+    width:150px;
+    height:150px;
+}
