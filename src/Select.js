@@ -1,16 +1,29 @@
 import "./Select.css"
+import React, { useState, useEffect } from 'react';
+
 function Select(props){
+    const [isListenerActive, setIsListenerActive] = useState(true);
+    
     function handleClick(event){
-        props.setMy(event)
-        const comSelect=Math.floor(Math.random()*3)
-        if (comSelect===0){
-            props.setCom("rock");
-        }
-        else if(comSelect===0){
-            props.setCom("sissor");
-        }
-        else{
-            props.setCom("paper")
+        if(isListenerActive){
+            props.setSubmitremainCheck(false);
+            props.setMy(event);
+            props.setSubmitremainCheck(true)
+            props.setSubmitCheck(true);
+            const comSelect=Math.floor(Math.random()*3)
+            if (comSelect===0){
+                props.setCom("rock");
+            }
+            else if(comSelect===0){
+                props.setCom("sissor");
+            }
+            else{
+                props.setCom("paper")
+            }
+            setIsListenerActive(false);
+            setTimeout(() => {
+                setIsListenerActive(true);
+            }, 2000);
         }
         
     }
