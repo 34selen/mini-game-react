@@ -7,11 +7,22 @@ function Screen(){
     const [score,setScore]=useState("");
     const [submitCheck,setSubmitCheck]=useState(false);
     const [submitRemain,setSubmitremainCheck]=useState(false);
+    const [checkWin,setCheckWin]=useState(null);//이기면 1 비기면 0 지면 -1
     useEffect(()=>{
         if(submitCheck===true){
-            setSubmitCheck(false)
+            setSubmitCheck(false);
+            if(checkWin===1){
+                console.log("이김");
+            }
+            else if(checkWin===0){
+                console.log("비김");
+            }
+            else if(checkWin===-1){
+                console.log("짐")
+            }
         }
     },[submitCheck]);
+
     const getImageFileName=(select)=>{
         return "/img/"+select+".jpeg"
     }
@@ -31,7 +42,7 @@ function Screen(){
                 </div>
             </div>
             <div id="botton-bar">
-                <Select setMy={setMySelect} setCom={setComselect} setSubmitCheck={setSubmitCheck} setSubmitremainCheck={setSubmitremainCheck}/>
+                <Select setMy={setMySelect} setCheckWin={setCheckWin} mySelect={mySelect} setCom={setComselect} setSubmitCheck={setSubmitCheck} setSubmitremainCheck={setSubmitremainCheck}/>
             </div>
         </div>
     )

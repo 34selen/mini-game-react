@@ -1,4 +1,5 @@
 import "./Select.css"
+import judge from "./Judge.js"
 import React, { useState, useEffect } from 'react';
 
 function Select(props){
@@ -10,7 +11,8 @@ function Select(props){
             props.setMy(event);
             props.setSubmitremainCheck(true)
             props.setSubmitCheck(true);
-            const comSelect=Math.floor(Math.random()*3)
+            const comSelect=Math.floor(Math.random()*3);
+            judge(props.mySelect,comSelect,props.setCheckWin);
             if (comSelect===0){
                 props.setCom("rock");
             }
