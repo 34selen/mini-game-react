@@ -4,24 +4,27 @@ import React, { useState, useEffect } from 'react';
 
 function Select(props){
     const [isListenerActive, setIsListenerActive] = useState(true);
-    
+    useEffect(()=>{
+        if(props.mySelect){
+            const comSelect=Math.floor(Math.random()*3);
+            if (comSelect===0){
+                props.setCom("rock");
+            }
+            else if(comSelect===1){
+                props.setCom("sissor");
+            }
+            else{
+                props.setCom("paper")
+            }
+            judge(props.mySelect,props.comSelect,props.setMyScore,props.setComScore);
+        }
+    },[props.mySelect])
     function handleClick(event){
         if(isListenerActive){
             props.setSubmitremainCheck(false);
             props.setMy(event);
             props.setSubmitremainCheck(true)
             props.setSubmitCheck(true);
-            const comSelect=Math.floor(Math.random()*3);
-            judge(props.mySelect,comSelect,props.setCheckWin);
-            if (comSelect===0){
-                props.setCom("rock");
-            }
-            else if(comSelect===0){
-                props.setCom("sissor");
-            }
-            else{
-                props.setCom("paper")
-            }
             setIsListenerActive(false);
             setTimeout(() => {
                 setIsListenerActive(true);
