@@ -1,10 +1,17 @@
 import './App.css';
-import Screen from './Screen';
-
+import Rock_sissor_paper from './rock-sissor-paper.js';
+import { Route, Routes } from "react-router-dom";
+import MainScreen from "./mainScreen.js"
 function App() {
   return (
-    <div className="App">
-      <Screen />
+    <div>
+      <Routes>
+        <Route path="/" element={ <MainScreen />}>
+          <Route path="rock-sissor-paper" element={<Rock_sissor_paper />}/>
+        </Route>
+        
+      </Routes>
+    
     </div>
   );
 }

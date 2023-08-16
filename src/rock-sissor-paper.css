@@ -37,3 +37,20 @@
 #divided-line{
     background-color: gray;
 }
+#score{
+    font-size:60px;
+    text-align: center;
+    margin-bottom:30px ;
+}
+#reset{
+    display:grid;
+    grid-template-columns: 600px 70px;
+    height: 40px;
+}
+#reset-button{
+    border:none;
+    background-color:aqua;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}

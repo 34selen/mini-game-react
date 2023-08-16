@@ -1,7 +1,7 @@
-import "./Screen.css"
+import "./rock-sissor-paper.css"
 import Select from "./Select";
 import {useState,useEffect} from 'react';
-function Screen(){
+function Rock_sissor_paper(){
     const [mySelect,setMySelect]=useState("");
     const [comSelect,setComselect]=useState("");
     const [score,setScore]=useState("");
@@ -18,11 +18,23 @@ function Screen(){
     const getImageFileName=(select)=>{
         return "/img/"+select+".jpeg"
     }
+    function resetButtonHandler(){
+        setMyScore(0);
+        setComScore(0);
+        setSubmitremainCheck(false);
+
+    }
 
     return(
         <div id="screen">
             <div id="top-bar">
-                <h1>{myScore}:{comScore}</h1>
+                <h1 id="score">{myScore}:{comScore}</h1>
+                <div id="reset">
+                    <div>
+                    </div>
+                    <button id="reset-button" onClick={resetButtonHandler}>Reset</button>
+                </div>
+              
             </div>
             <div id="middle-bar">
                 <div id="mySelect">
@@ -36,10 +48,10 @@ function Screen(){
                 </div>
             </div>
             <div id="botton-bar">
-                <Select setMy={setMySelect} comSelect={comSelect}setMyScore={setMyScore} setComScore={setComScore} mySelect={mySelect} setCom={setComselect} setSubmitCheck={setSubmitCheck} setSubmitremainCheck={setSubmitremainCheck}/>
+                <Select setMy={setMySelect} comSelect={comSelect}setMyScore={setMyScore} setComScore={setComScore} mySelect={mySelect} setCom={setComselect} setSubmitCheck={setSubmitCheck} setSubmitremainCheck={setSubmitremainCheck} submitCheck={submitCheck}/>
             </div>
         </div>
     )
 }
 
-export default Screen;
+export default Rock_sissor_paper;

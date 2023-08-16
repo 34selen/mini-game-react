@@ -5,20 +5,11 @@ import React, { useState, useEffect } from 'react';
 function Select(props){
     const [isListenerActive, setIsListenerActive] = useState(true);
     useEffect(()=>{
-        if(props.mySelect){
-            const comSelect=Math.floor(Math.random()*3);
-            if (comSelect===0){
-                props.setCom("rock");
-            }
-            else if(comSelect===1){
-                props.setCom("sissor");
-            }
-            else{
-                props.setCom("paper")
-            }
+        if(props.submitCheck){
             judge(props.mySelect,props.comSelect,props.setMyScore,props.setComScore);
         }
-    },[props.mySelect])
+    },[props.submitCheck])
+    
     function handleClick(event){
         if(isListenerActive){
             props.setSubmitremainCheck(false);
@@ -26,6 +17,17 @@ function Select(props){
             props.setSubmitremainCheck(true)
             props.setSubmitCheck(true);
             setIsListenerActive(false);
+            const comSelect=Math.floor(Math.random()*3);
+            if (comSelect===0){
+                props.setCom("rock");
+                console.log("컴퓨터는 주먹")
+            }
+            else if(comSelect===1){
+                props.setCom("sissor");
+            }
+            else{
+                props.setCom("paper")
+            }
             setTimeout(() => {
                 setIsListenerActive(true);
             }, 2000);
