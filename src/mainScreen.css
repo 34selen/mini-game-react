@@ -1,0 +1,35 @@
+#screen{
+    width:800px;
+    height: 800px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+}
+@font-face {
+    font-family: 'IAMAPLAYER';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#title{
+    font-family:'IAMAPLAYER';
+    text-align: center;
+    font-size: 80px;
+    padding-top:130px;
+}
+#rock-sissor-paper{
+    font-family:'IAMAPLAYER';
+    text-align: center;
+    text-decoration:none;
+    color:red;
+}
+#gameList{
+    margin-top: 120px;
+    font-size: 30px;
+}
+.games{
+    text-decoration: none;
+}

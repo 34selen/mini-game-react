@@ -6,9 +6,8 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={ <MainScreen />}>
-          <Route path="rock-sissor-paper" element={<Rock_sissor_paper />}/>
-        </Route>
+        <Route path="/" element={<MainScreen />}/>
+        <Route path="/rock-sissor-paper" element={<Rock_sissor_paper />} />
         
       </Routes>
     

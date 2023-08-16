@@ -1,6 +1,8 @@
 import "./rock-sissor-paper.css"
 import Select from "./Select";
+import React from 'react';
 import {useState,useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 function Rock_sissor_paper(){
     const [mySelect,setMySelect]=useState("");
     const [comSelect,setComselect]=useState("");
@@ -24,7 +26,13 @@ function Rock_sissor_paper(){
         setSubmitremainCheck(false);
 
     }
+    const navigate = useNavigate();
 
+    const handleResetButton = () => {
+      navigate("/");
+    };
+
+    
     return(
         <div id="screen">
             <div id="top-bar">
@@ -33,6 +41,7 @@ function Rock_sissor_paper(){
                     <div>
                     </div>
                     <button id="reset-button" onClick={resetButtonHandler}>Reset</button>
+                    <button id="menu-button" onClick={handleResetButton}>menu</button>
                 </div>
               
             </div>
