@@ -40,7 +40,7 @@ function Select(props){
             <div className="button-form">
                 <img 
                 id="rock"
-                src="/img/rock.jpeg" 
+                src="/img/rock-sissor-paper/rock.jpeg" 
                 alt="Rock" 
                 onClick={() =>handleClick("rock")}
                 />
@@ -48,7 +48,7 @@ function Select(props){
             <div className="button-form" >
                 <img 
                 id="sissor" 
-                src="/img/sissor.jpeg"
+                src="/img/rock-sissor-paper/sissor.jpeg"
                 alt="Sissor"
                 onClick={() =>handleClick("sissor")}
                 />
@@ -56,7 +56,7 @@ function Select(props){
             <div className="button-form">
                 <img  
                 id="paper" 
-                src="/img/paper.jpeg" 
+                src="/img/rock-sissor-paper/paper.jpeg" 
                 alt="paper" 
                 onClick={() =>handleClick("paper")}
                 />

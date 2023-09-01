@@ -1,0 +1,22 @@
+#top_bar{
+    width:700px;
+    height:200px;
+    background-color: white;
+    border-bottom:1.5px gray solid;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-left: 50px;
+
+}
+@font-face {
+    font-family: 'IAMAPLAYER';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#title{
+    font-family:'IAMAPLAYER';
+    text-align: center;
+    font-size: 60px;
+    padding-top:10px;
+}
