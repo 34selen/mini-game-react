@@ -7,8 +7,12 @@ function MainScreen(){
                 mini-game
             </div>
             <div id="gameList">
-                <div id="rock-sissor-paper">
+                <div className="gameName">
                     <Link to="/rock-sissor-paper" className='games'>rock-sissor-paper</Link>
+                    
+                </div>
+                <div className="gameName">
+                    <Link to="/tic-tac-toe" className='games'>tic-tac-toe</Link>
                 </div>
             </div>
 

@@ -20,11 +20,12 @@
     font-size: 80px;
     padding-top:130px;
 }
-#rock-sissor-paper{
+.gameName{
     font-family:'IAMAPLAYER';
     text-align: center;
     text-decoration:none;
     color:red;
+    padding:25px;
 }
 #gameList{
     margin-top: 120px;
