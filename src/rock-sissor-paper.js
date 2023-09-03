@@ -18,7 +18,7 @@ function Rock_sissor_paper(){
     },[submitCheck]);
 
     const getImageFileName=(select)=>{
-        return "/img/"+select+".jpeg"
+        return "/img/rock-sissor-paper/"+select+".jpeg"
     }
     function resetButtonHandler(){
         setMyScore(0);
@@ -28,7 +28,7 @@ function Rock_sissor_paper(){
     }
     const navigate = useNavigate();
 
-    const handleResetButton = () => {
+    const handleMenuButton = () => {
       navigate("/");
     };
 
@@ -41,7 +41,7 @@ function Rock_sissor_paper(){
                     <div>
                     </div>
                     <button id="reset-button" onClick={resetButtonHandler}>Reset</button>
-                    <button id="menu-button" onClick={handleResetButton}>menu</button>
+                    <button id="menu-button" onClick={handleMenuButton}>menu</button>
                 </div>
               
             </div>

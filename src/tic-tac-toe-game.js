@@ -1,5 +1,7 @@
 import styles from "./tic-tac-toe-game.module.css"
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import Tic_Tac_Toe_Judge from "./tic-tac-toe-judge";
+import ResultScreen from "./tic-tac-toe-resultScreen";
 function Tic_Tac_Toe_game(){
     const [imageState,setimageState]=useState({
         one:null,
@@ -12,18 +14,33 @@ function Tic_Tac_Toe_game(){
         eight:null,
         nine:null
     })
+    const [winner,setWinner]=useState("");
+    useEffect(()=> {
+        Tic_Tac_Toe_Judge(imageState,setWinner)
+    },[imageState]
+    )
+    
+    const [turn,setTurn]=useState("X");
     function handleClick(event) {
         // event.target.className 은 클릭된 div의 모든 클래스 이름을 반환합니다.
         // split을 사용하여 첫 번째 클래스 이름만 가져옵니다.
         const firstClass = event.target.className.split(" ")[0];
-        
-        const newImageState = {
-            ...imageState,
-            [firstClass]: './img/tic-tac-toe/O_mark.png',
-        };
-        setimageState(newImageState);
-        console.log(firstClass);
-        console.log(imageState);
+
+        if(imageState[firstClass]==null){
+            const newImageState = {
+                ...imageState,
+                [firstClass]: `./img/tic-tac-toe/${turn}_mark.png`,
+            };
+            setimageState(newImageState);
+            if (turn=="O"){
+                setTurn("X");
+            }
+            else{
+                setTurn("O");
+            }
+        }
+       
+
     }
     return(
         <div className={styles.screen}>
@@ -62,6 +79,7 @@ function Tic_Tac_Toe_game(){
                     </div>
                 </div>
             </div>
+            <ResultScreen className={styles.ResultScreen}winner={winner}/>
         </div>
     )
 }
