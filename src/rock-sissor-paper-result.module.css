@@ -1,0 +1,16 @@
+.resultContainer{
+    position:fixed;
+    width:400px;
+    height:400px;
+    background-color:rgba(0,0,255,0.5);
+    color:(255,255,255,0.9);
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    border-radius:50px;
+    font-size:200px;
+    
+    display: flex;
+    justify-content: center; /* 가로축에서 중앙 정렬 */
+    align-items: center; /* 세로축에서 중앙 정렬 */
+}

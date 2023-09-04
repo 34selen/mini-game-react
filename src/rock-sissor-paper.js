@@ -2,6 +2,7 @@ import "./rock-sissor-paper.css"
 import Select from "./Select";
 import React from 'react';
 import {useState,useEffect} from 'react';
+import Rock_sissor_paper_result from "./rock-sissor-paper-result";
 import { useNavigate } from 'react-router-dom';
 function Rock_sissor_paper(){
     const [mySelect,setMySelect]=useState("");
@@ -11,6 +12,17 @@ function Rock_sissor_paper(){
     const [submitRemain,setSubmitremainCheck]=useState(false);
     const [myScore,setMyScore]=useState(0);
     const [comScore,setComScore]=useState(0);
+    const [showResult,setShowResult]=useState(false);
+    useEffect(()=>{
+        if(submitCheck===true){
+            setShowResult(true);
+            setTimeout(() => {
+                setShowResult(false);
+            }, 2000);
+        }
+        }
+        ,[submitCheck]
+    )
     useEffect(()=>{
         if(submitCheck===true){
             setSubmitCheck(false);
@@ -59,6 +71,7 @@ function Rock_sissor_paper(){
             <div id="botton-bar">
                 <Select setMy={setMySelect} comSelect={comSelect}setMyScore={setMyScore} setComScore={setComScore} mySelect={mySelect} setCom={setComselect} setSubmitCheck={setSubmitCheck} setSubmitremainCheck={setSubmitremainCheck} submitCheck={submitCheck}/>
             </div>
+            {showResult?<Rock_sissor_paper_result myScore={myScore} comScore={comScore}/>:null}
         </div>
     )
 }
