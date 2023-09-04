@@ -26,21 +26,19 @@ function Tic_Tac_Toe_game(){
         // split을 사용하여 첫 번째 클래스 이름만 가져옵니다.
         const firstClass = event.target.className.split(" ")[0];
 
-        if(imageState[firstClass]==null){
+        if(imageState[firstClass]===null){
             const newImageState = {
                 ...imageState,
                 [firstClass]: `./img/tic-tac-toe/${turn}_mark.png`,
             };
             setimageState(newImageState);
-            if (turn=="O"){
+            if (turn==="O"){
                 setTurn("X");
             }
             else{
                 setTurn("O");
             }
         }
-       
-
     }
     return(
         <div className={styles.screen}>
@@ -79,7 +77,7 @@ function Tic_Tac_Toe_game(){
                     </div>
                 </div>
             </div>
-            <ResultScreen className={styles.ResultScreen}winner={winner}/>
+            <ResultScreen className={styles.ResultScreen}winner={winner} setTurn={setTurn} setWinner={setWinner} setimageState={setimageState}/>
         </div>
     )
 }

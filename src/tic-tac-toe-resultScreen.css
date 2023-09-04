@@ -1,0 +1,33 @@
+.resultContainer{
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:500px;
+    height:500px;
+    background-color:red;
+    border-radius: 50px;
+    font-size: 20px;
+    display: flex; /* Flexbox를 활성화 */
+    justify-content: center; /* 가로축에서 중앙 정렬 */
+    align-items: center; /* 세로축에서 중앙 정렬 */
+    flex-direction: column;
+}
+.declareWinner{
+    font-size: 50px;
+    flex-grow: 1;  /* 이 속성을 사용해 가능한 모든 여유 공간을 차지하도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.resetButton{
+    margin-bottom: 50px;
+    border:none;
+    background-color:aqua;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width:100px;
+    height:40px;
+}

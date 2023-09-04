@@ -13,7 +13,7 @@ function Tic_Tac_Toe(){
                 <div id="reset">
                     <div>
                     </div>
-                    <button id="reset-button" >Reset</button>
+                    
                     <button id="menu-button" onClick={handleMenuButton}>menu</button> 
                 </div>
             </div>
